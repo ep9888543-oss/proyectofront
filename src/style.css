@@ -1,0 +1,259 @@
+:root {
+  /* Colores principales */
+  --morado: #10b981;          /* Esmeralda principal */
+  --morado-oscuro: #047857;   /* Esmeralda profundo */
+  --morado-claro: #d1fae5;    /* Menta suave */
+
+  --rosa: #f59e0b;            /* Ámbar cálido */
+  --rosa-oscuro: #b45309;     /* Ámbar oscuro */
+  --rosa-claro: #fef3c7;      /* Crema cálida */
+
+  --azul: #0ea5e9;            /* Cian / Azul cielo */
+  --azul-oscuro: #0369a1;     /* Azul marino moderno */
+  --azul-claro: #e0f2fe;      /* Azul hielo */
+
+  --amarillo: #fef08a;
+
+  --fondo: #f8fafc;
+  --texto: #1e293b;           /* Gris pizarra oscuro (alta legibilidad) */
+  --blanco: #ffffff;
+}
+
+/* Fondo general */
+body {
+  background: radial-gradient(circle at top left, #f0fdf4 0%, #f8fafc 45%, #f1f5f9 100%);
+  background-attachment: fixed;
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Botones */
+.btn-morado {
+  background-color: var(--morado);
+  border-color: var(--morado);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.btn-morado:hover,
+.btn-morado:focus {
+  background-color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-morado {
+  border-color: var(--morado);
+  color: var(--morado-oscuro);
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.btn-outline-morado:hover {
+  background-color: var(--morado);
+  color: #fff;
+}
+
+/* Botones adicionales */
+.btn-rosa {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.btn-rosa:hover {
+  background-color: var(--rosa-oscuro);
+  border-color: var(--rosa-oscuro);
+  color: #fff;
+}
+
+.btn-azul {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.btn-azul:hover {
+  background-color: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  color: #fff;
+}
+
+/* Enlaces */
+a {
+  color: var(--morado-oscuro);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: var(--azul-oscuro);
+}
+
+/* Navbar */
+.navbar-morado {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar-morado .nav-link {
+  color: #475569;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+.navbar-morado .nav-link:hover,
+.navbar-morado .nav-link.active {
+  color: var(--morado-oscuro);
+}
+
+/* Tarjetas */
+.tarjeta {
+  background: var(--blanco);
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: var(--morado);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* Formularios */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border-color: #cbd5e1;
+  background-color: #fff;
+  color: var(--texto);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--morado);
+  box-shadow: 0 0 0 .2rem rgba(16, 185, 129, 0.18);
+}
+
+/* Iconos circulares */
+.icono-circulo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px; /* Cambiado a squircle moderno; usa 50% si lo prefieres redondo */
+  background: var(--morado-claro);
+  color: var(--morado-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+/* Hero de inicio */
+.hero {
+  background: linear-gradient(120deg, #064e3b 0%, #047857 55%, #0284c7 100%);
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 16px 32px rgba(6, 78, 59, 0.16);
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4 {
+  color: #fff;
+}
+
+/* Búsqueda rápida de personajes en Inicio */
+.buscador-id {
+  border-left: 5px solid var(--morado);
+}
+
+.buscador-id .input-group-text {
+  border-color: #cbd5e1;
+  color: var(--morado-oscuro);
+}
+
+.buscador-id .form-control {
+  min-width: 0;
+}
+
+/* Personajes */
+.personaje-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.personaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.1);
+}
+
+.personaje-card img {
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Etiquetas */
+.badge-morado {
+  background-color: var(--morado-claro);
+  color: var(--morado-oscuro);
+  font-weight: 600;
+}
+
+.badge-rosa {
+  background-color: var(--rosa-claro);
+  color: var(--rosa-oscuro);
+  font-weight: 600;
+}
+
+.badge-azul {
+  background-color: var(--azul-claro);
+  color: var(--azul-oscuro);
+  font-weight: 600;
+}
+
+/* Pantalla de error */
+.error-codigo {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--morado);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Tablas */
+.table thead {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
